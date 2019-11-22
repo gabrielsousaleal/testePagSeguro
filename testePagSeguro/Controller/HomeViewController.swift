@@ -39,6 +39,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController!.navigationBar.isHidden = true
+        
         pegarUsuarioUserDefaults()
         
         setarDelegates()
@@ -138,10 +140,11 @@ class HomeViewController: UIViewController {
         let screen = UIScreen.main.bounds
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 16, bottom: 10, right: 16)
-        layout.itemSize = CGSize(width: screen.width/2.30, height: 144)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 10, right: 20)
+        layout.itemSize = CGSize(width: screen.width/2.6, height: screen.width/2.6)
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 40
+        
         
         botoesCollectionView.collectionViewLayout = layout
         

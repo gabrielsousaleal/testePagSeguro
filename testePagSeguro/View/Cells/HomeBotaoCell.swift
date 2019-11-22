@@ -30,6 +30,16 @@ class HomeBotaoCell: UICollectionViewCell {
         
         viewController = botaoObj.viewController
         
+        
+        
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        layer.shadowRadius = 8.0
+        layer.shadowOpacity = 0.3
+        layer.masksToBounds = false
+        
+        layer.cornerRadius = 8
+        
     }
     
 }

@@ -61,6 +61,22 @@ class LoginViewController: UIViewController {
         
         guard let senha = senhaTextField.text else { return }
         
+        if usuario.count == 0 {
+            
+            mostrarMensagemErro(mensagem: "Digite o seu e-mail")
+            
+            return
+            
+        }
+        
+        if senha.count == 0 {
+            
+            mostrarMensagemErro(mensagem: "Digite a sua senha")
+            
+            return
+            
+        }
+        
         DAO().login(usuario: usuario, senha: senha) { mensagem in
             
             if mensagem != "sucesso" {

@@ -25,4 +25,18 @@ class Segues {
     
     }
     
+    static func irParaLogin(vc: UIViewController) {
+        
+        DispatchQueue.main.async {
+            
+            let storyboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
+            
+            let tabbarcontroller = storyboard.instantiateViewController(identifier: "loginStoryboard") as! TabBarController
+            
+            vc.present(tabbarcontroller, animated: true)
+            
+        }
+        
+    }
+    
 }

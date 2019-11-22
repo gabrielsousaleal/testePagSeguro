@@ -26,7 +26,7 @@
         <!--Home-->
         <scene sceneID="uYx-yJ-rhZ">
             <objects>
-                <viewController id="552-Od-TvY" sceneMemberID="viewController">
+                <viewController id="552-Od-TvY" customClass="HomeViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjr-bJ-hBG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,13 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="rqP-th-LZG"/>
                     <navigationItem key="navigationItem" id="dU7-Ua-unZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="botao1" destination="42X-HT-yqa" id="AYn-Af-koH"/>
+                        <outlet property="botao2" destination="dBC-GI-G4y" id="uzL-Zc-1ry"/>
+                        <outlet property="botao3" destination="bQE-FB-g50" id="tfS-Vs-yOX"/>
+                        <outlet property="botao4" destination="9uX-1e-Zfw" id="CFW-fH-pLI"/>
+                        <outlet property="saldoLabel" destination="Aie-gy-KyD" id="DGm-ZW-AfD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eax-Ht-WCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

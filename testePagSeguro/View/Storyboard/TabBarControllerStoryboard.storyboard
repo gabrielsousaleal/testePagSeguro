@@ -17,6 +17,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="M0m-pH-KTF" kind="relationship" relationship="viewControllers" id="YC4-s3-Lw4"/>
+                        <segue destination="Ks0-Eq-x7r" kind="relationship" relationship="viewControllers" id="lIg-Jx-maa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLx-qF-ZuY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,11 +28,27 @@
         <scene sceneID="u6K-RQ-dnz">
             <objects>
                 <viewControllerPlaceholder storyboardName="HomeStoryboard" id="M0m-pH-KTF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Rqy-mJ-JnC"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" selectedImage="house.fill" id="Rqy-mJ-JnC"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grx-Kd-4nC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-364" y="-538"/>
         </scene>
+        <!--ExtratoStoryboard-->
+        <scene sceneID="ERS-6U-APc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExtratoStoryboard" id="Ks0-Eq-x7r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up" catalog="system" selectedImage="square.and.arrow.up.fill" id="5xP-dj-Jcw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDV-gU-rh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-366" y="-486"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
+    </resources>
 </document>

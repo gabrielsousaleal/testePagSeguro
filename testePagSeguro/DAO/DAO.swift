@@ -69,6 +69,93 @@ class DAO {
                
         
     }
+    
+    func pegarSaldo(usuario: Usuario, completion: @escaping (String?) -> () ) {
+        
+        let id = usuario._id
+        
+        let token = usuario.token
+        
+        let url = URL(string: "https://private-anon-b10352fce4-tqi.apiary-mock.com/balances?id=\(id)")!
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(token)", forHTTPHeaderField: "Token")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if response != nil {
+                
+            if let data = data {
+                
+                do {
+                    
+                    let json = try JSONDecoder().decode(Saldo.self, from: data)
+                    
+                    completion(json.balance)
+                    
+                } catch {
+                    
+                    completion(nil)
+                    
+                }
+               
+            }
+                
+          } else {
+                
+            print(error ?? "Unknown error")
+            completion(nil)
+                
+          }
+        }
+
+        task.resume()
+        
+    }
+    
+    func pegarExtrato(usuario: Usuario, completion: @escaping ([Extrato]) -> ()) {
+        
+        let id = usuario._id
+        
+        let token = usuario.token
+        
+        let url = URL(string: "https://private-anon-b10352fce4-tqi.apiary-mock.com/transactions/?id=\(id)")!
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(token)", forHTTPHeaderField: "Token")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if response != nil {
+
+                if let data = data {
+              
+                do {
+                    
+                    let json = try JSONDecoder().decode([Extrato].self, from: data)
+                    
+                    completion(json)
+                    
+                } catch {
+                    
+                    print(error)
+                    
+                    completion([])
+                    
+                }
+                
+            }
+          } else {
+            
+            print(error ?? "Unknown error")
+            
+            completion([])
+            
+          }
+        }
+
+        task.resume()
+        
+    }
 
     
     //****************************************************************

@@ -26,7 +26,9 @@ class ExtratoCell: UITableViewCell {
         
         dataLabel.text  = extrato.date
         
-        totalLabel.text = extrato.value
+        let totalString = Helper.formatarStringParaMoeda(valor: extrato.value)
+        
+        totalLabel.text = totalString
         
     }
     

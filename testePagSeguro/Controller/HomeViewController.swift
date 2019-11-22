@@ -10,21 +10,13 @@ import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    //****************************************************************
+     //****************************************************************
     //MARK: STORYBOARD OUTLETS
     //****************************************************************
     
-    @IBOutlet var saldoLabel: UILabel!
+    @IBOutlet var saldoLabel: UILabel! 
     
-    @IBOutlet var botao1: UIButton!
-    
-    @IBOutlet var botao2: UIButton!
-    
-    @IBOutlet var botao3: UIButton!
-    
-    @IBOutlet var botao4: UIButton!
-    
+    @IBOutlet var botoesCollectionView: UICollectionView!
     //****************************************************************
     //MARK: VARIAVEIS
     //****************************************************************
@@ -49,10 +41,26 @@ class HomeViewController: UIViewController {
         
         pegarUsuarioUserDefaults()
         
-        popularBotoes()
+        setarDelegates()
         
+        setarLayoutCells()
+            
         pegarSaldo()
+        
+        pegarToggles()
                 
+    }
+    
+    //****************************************************************
+    //MARK: DELEGATES
+    //****************************************************************
+    
+    func setarDelegates(){
+        
+        botoesCollectionView.delegate = self
+        
+        botoesCollectionView.dataSource = self
+        
     }
     
     
@@ -115,6 +123,30 @@ class HomeViewController: UIViewController {
         
     }
     
+    func recarregarCollectionView() {
+        
+        DispatchQueue.main.async {
+            
+            self.botoesCollectionView.reloadData()
+            
+        }
+        
+    }
+    
+    func setarLayoutCells(){
+        
+        let screen = UIScreen.main.bounds
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 16, bottom: 10, right: 16)
+        layout.itemSize = CGSize(width: screen.width/2.30, height: 144)
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 40
+        
+        botoesCollectionView.collectionViewLayout = layout
+        
+    }
+    
     //****************************************************************
     //MARK: LÓGICA
     //****************************************************************
@@ -123,17 +155,62 @@ class HomeViewController: UIViewController {
         
         listaToggles = usuario.toggles
         
+        recarregarCollectionView()
+        
     }
     
-    func popularBotoes(){
+    
+}
+
+
+//****************************************************************
+//MARK: COLLECTION VIEW DELEGATE
+//****************************************************************
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+}
+
+
+//****************************************************************
+//MARK: COLLECTION VIEW DATA SOURCE
+//****************************************************************
+
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        pegarToggles()
+        return usuario.toggles.count
         
-        listaBotoes.append(botao4)
-        listaBotoes.append(botao3)
-        listaBotoes.append(botao2)
-        listaBotoes.append(botao1)
-     
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeBotaoCell", for: indexPath) as! HomeBotaoCell
+        
+        let row = indexPath.row
+        
+        let botao = usuario.toggles[row]
+        
+        cell.configurarCell(botao: botao)
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let row = indexPath.row
+        
+        let botao = usuario.toggles[row]
+        
+        let botaoObj = Botao(botao: botao)
+        
+        let viewController = botaoObj.viewController
+        
+        //CHAMAR AQUI A VIEW CONTROLLER
+        
+        
     }
     
     

@@ -25,6 +25,8 @@ class ExtratoViewController: UIViewController {
     
     var extrato: [Extrato] = []
     
+    var refresh: UIRefreshControl = UIRefreshControl()
+    
     
     //****************************************************************
     //MARK: CICLO DE VIDA
@@ -42,7 +44,7 @@ class ExtratoViewController: UIViewController {
     }
     
     //****************************************************************
-    //MARK: CICLO DE VIDA
+    //MARK: DELEGATES
     //****************************************************************
     
     func setarDelegates() {
@@ -50,6 +52,22 @@ class ExtratoViewController: UIViewController {
         extratoTableView.delegate = self
         
         extratoTableView.dataSource = self
+        
+        configurarTableViewRefresh()
+        
+    }
+    
+    //****************************************************************
+    //MARK: REFRESH CONTROL
+    //****************************************************************
+    
+    func configurarTableViewRefresh() {
+        
+        refresh.addTarget(self, action: #selector(pegarExtrato), for: .valueChanged)
+        
+        refresh.tintColor = #colorLiteral(red: 1, green: 0.262745098, blue: 0.5921568627, alpha: 1)
+        
+        extratoTableView.refreshControl = refresh
         
     }
     
@@ -78,13 +96,15 @@ class ExtratoViewController: UIViewController {
             
             self.extrato = extratoNovo
             
+            self.extratoTableView.refreshControl?.endRefreshing()
+            
             self.extratoTableView.reloadData()
             
         }
         
     }
     
-    func pegarExtrato() {
+    @objc func pegarExtrato() {
         
         guard let usuario = usuario else { return }
         
@@ -134,7 +154,5 @@ extension ExtratoViewController: UITableViewDataSource {
         return cell
         
     }
-    
-    
     
 }

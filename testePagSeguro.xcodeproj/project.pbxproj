@@ -13,6 +13,9 @@
 		941BF6A723876DBD0050096B /* ExtratoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941BF6A623876DBD0050096B /* ExtratoStoryboard.storyboard */; };
 		941BF6AA23876F500050096B /* ExtratoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6A923876F500050096B /* ExtratoCell.swift */; };
 		941BF6AC2387703F0050096B /* ExtratoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6AB2387703F0050096B /* ExtratoViewController.swift */; };
+		941BF6AE238776430050096B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6AD238776430050096B /* Helper.swift */; };
+		941BF6B0238863FD0050096B /* HomeBotaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6AF238863FD0050096B /* HomeBotaoCell.swift */; };
+		941BF6B2238867A30050096B /* Botao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6B1238867A30050096B /* Botao.swift */; };
 		94F8C6992386D2C100F688A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C6982386D2C100F688A1 /* AppDelegate.swift */; };
 		94F8C69B2386D2C100F688A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C69A2386D2C100F688A1 /* SceneDelegate.swift */; };
 		94F8C6A32386D2C100F688A1 /* testePagSeguro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C6A12386D2C100F688A1 /* testePagSeguro.xcdatamodeld */; };
@@ -54,6 +57,9 @@
 		941BF6A623876DBD0050096B /* ExtratoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExtratoStoryboard.storyboard; sourceTree = "<group>"; };
 		941BF6A923876F500050096B /* ExtratoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoCell.swift; sourceTree = "<group>"; };
 		941BF6AB2387703F0050096B /* ExtratoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoViewController.swift; sourceTree = "<group>"; };
+		941BF6AD238776430050096B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		941BF6AF238863FD0050096B /* HomeBotaoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBotaoCell.swift; sourceTree = "<group>"; };
+		941BF6B1238867A30050096B /* Botao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botao.swift; sourceTree = "<group>"; };
 		94F8C6952386D2C100F688A1 /* testePagSeguro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testePagSeguro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F8C6982386D2C100F688A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F8C69A2386D2C100F688A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				941BF6A923876F500050096B /* ExtratoCell.swift */,
+				941BF6AF238863FD0050096B /* HomeBotaoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 		94F8C6972386D2C100F688A1 /* testePagSeguro */ = {
 			isa = PBXGroup;
 			children = (
+				941BF6AD238776430050096B /* Helper.swift */,
 				94F8C6CE2386DC4E00F688A1 /* Modelo */,
 				94F8C6D12387298700F688A1 /* View */,
 				94F8C6D523872D6700F688A1 /* Controller */,
@@ -179,6 +187,7 @@
 				94F8C6CF2386DC5900F688A1 /* Usuario.swift */,
 				941BF6A2238748AD0050096B /* Saldo.swift */,
 				941BF6A423875A320050096B /* Extrato.swift */,
+				941BF6B1238867A30050096B /* Botao.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -366,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F8C6D723872D7600F688A1 /* LoginViewController.swift in Sources */,
+				941BF6AE238776430050096B /* Helper.swift in Sources */,
 				94F8C6E1238736A100F688A1 /* TabBarController.swift in Sources */,
 				94F8C6A32386D2C100F688A1 /* testePagSeguro.xcdatamodeld in Sources */,
 				941BF6AA23876F500050096B /* ExtratoCell.swift in Sources */,
@@ -375,8 +385,10 @@
 				941BF6A1238743A60050096B /* HomeViewController.swift in Sources */,
 				94F8C6992386D2C100F688A1 /* AppDelegate.swift in Sources */,
 				941BF6A3238748AD0050096B /* Saldo.swift in Sources */,
+				941BF6B2238867A30050096B /* Botao.swift in Sources */,
 				941BF6AC2387703F0050096B /* ExtratoViewController.swift in Sources */,
 				94F8C69B2386D2C100F688A1 /* SceneDelegate.swift in Sources */,
+				941BF6B0238863FD0050096B /* HomeBotaoCell.swift in Sources */,
 				94F8C6CD2386DC0600F688A1 /* DAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

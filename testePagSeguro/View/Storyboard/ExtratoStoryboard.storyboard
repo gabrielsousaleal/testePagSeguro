@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Extrato-->
+        <!--Extrato View Controller-->
         <scene sceneID="HWz-gN-6el">
             <objects>
                 <viewController storyboardIdentifier="extratoViewController" id="HHj-00-BCd" customClass="ExtratoViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7iy-dc-4DH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Extrato" image="square.and.arrow.up" catalog="system" selectedImage="square.and.arrow.up.fill" id="EqT-3A-T1v"/>
+                    <tabBarItem key="tabBarItem" title="" image="rectangle" selectedImage="group" id="EqT-3A-T1v">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="extratoTableView" destination="xGl-56-mUN" id="KLF-zs-SSK"/>
@@ -79,7 +81,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
+        <image name="group" width="160" height="57"/>
+        <image name="rectangle" width="160" height="55"/>
     </resources>
 </document>

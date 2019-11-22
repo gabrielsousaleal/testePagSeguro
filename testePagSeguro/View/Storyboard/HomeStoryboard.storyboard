@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1787" y="105"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="uYx-yJ-rhZ">
             <objects>
                 <viewController storyboardIdentifier="homeViewController" id="552-Od-TvY" customClass="HomeViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTG-ca-L0R">
-                                <rect key="frame" x="19" y="90" width="221" height="36"/>
+                                <rect key="frame" x="19" y="87.5" width="221" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="PX9-49-aab"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aie-gy-KyD">
-                                <rect key="frame" x="19" y="126" width="283" height="36"/>
+                                <rect key="frame" x="19" y="123.5" width="283" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1Ib-b9-TUn"/>
                                 </constraints>
@@ -51,9 +51,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aUY-5t-ggm">
-                                <rect key="frame" x="0.0" y="196" width="320" height="323"/>
+                                <rect key="frame" x="0.0" y="167.5" width="320" height="351.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdN-1S-Efj">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdN-1S-Efj">
                                     <size key="itemSize" width="136" height="144"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -117,11 +117,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUP-9U-SpF">
-                                <rect key="frame" x="19" y="43" width="111" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="8Xf-5A-H7I"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cUP-9U-SpF">
+                                <rect key="frame" x="19" y="43" width="221" height="19.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,8 +126,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="aUY-5t-ggm" firstAttribute="top" secondItem="Aie-gy-KyD" secondAttribute="bottom" constant="34" id="3Iw-Zu-4dm"/>
-                            <constraint firstItem="nHG-q5-uQU" firstAttribute="trailing" secondItem="cUP-9U-SpF" secondAttribute="trailing" constant="190" id="8Cc-EZ-Oa7"/>
+                            <constraint firstItem="aUY-5t-ggm" firstAttribute="top" secondItem="Aie-gy-KyD" secondAttribute="bottom" constant="8" id="3Iw-Zu-4dm"/>
+                            <constraint firstItem="nHG-q5-uQU" firstAttribute="trailing" secondItem="cUP-9U-SpF" secondAttribute="trailing" constant="80" id="8Cc-EZ-Oa7"/>
                             <constraint firstItem="aUY-5t-ggm" firstAttribute="trailing" secondItem="nHG-q5-uQU" secondAttribute="trailing" id="A5N-z8-iy2"/>
                             <constraint firstItem="nHG-q5-uQU" firstAttribute="trailing" secondItem="Aie-gy-KyD" secondAttribute="trailing" constant="18" id="Bgm-N5-UxD"/>
                             <constraint firstItem="Aie-gy-KyD" firstAttribute="top" secondItem="FTG-ca-L0R" secondAttribute="bottom" id="CUg-21-HD1"/>
@@ -145,11 +142,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nHG-q5-uQU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="rqP-th-LZG"/>
+                    <tabBarItem key="tabBarItem" title="" image="rectangle" selectedImage="group" id="rqP-th-LZG">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="9"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="dU7-Ua-unZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="botoesCollectionView" destination="aUY-5t-ggm" id="9Gk-32-TkF"/>
+                        <outlet property="nomeUsuarioLabel" destination="cUP-9U-SpF" id="TfJ-sY-Kwa"/>
                         <outlet property="saldoLabel" destination="Aie-gy-KyD" id="DGm-ZW-AfD"/>
                     </connections>
                 </viewController>
@@ -159,6 +159,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="group" width="160" height="57"/>
+        <image name="rectangle" width="160" height="55"/>
     </resources>
 </document>

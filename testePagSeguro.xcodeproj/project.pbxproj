@@ -16,6 +16,14 @@
 		941BF6AE238776430050096B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6AD238776430050096B /* Helper.swift */; };
 		941BF6B0238863FD0050096B /* HomeBotaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6AF238863FD0050096B /* HomeBotaoCell.swift */; };
 		941BF6B2238867A30050096B /* Botao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BF6B1238867A30050096B /* Botao.swift */; };
+		9448018E2388A07C00F69452 /* PagamentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448018D2388A07C00F69452 /* PagamentosViewController.swift */; };
+		944801902388A09F00F69452 /* EmprestimoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448018F2388A09F00F69452 /* EmprestimoViewController.swift */; };
+		944801922388A0B600F69452 /* TransferenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944801912388A0B600F69452 /* TransferenciaViewController.swift */; };
+		944801942388A0C800F69452 /* CelularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944801932388A0C800F69452 /* CelularViewController.swift */; };
+		94E72A4E23889FBD00DFFFB1 /* PagamentosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E72A4D23889FBD00DFFFB1 /* PagamentosStoryboard.storyboard */; };
+		94E72A5023889FEE00DFFFB1 /* EmprestimoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E72A4F23889FEE00DFFFB1 /* EmprestimoStoryboard.storyboard */; };
+		94E72A522388A01D00DFFFB1 /* CelularStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E72A512388A01D00DFFFB1 /* CelularStoryboard.storyboard */; };
+		94E72A542388A03500DFFFB1 /* TransferenciaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E72A532388A03500DFFFB1 /* TransferenciaStoryboard.storyboard */; };
 		94F8C6992386D2C100F688A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C6982386D2C100F688A1 /* AppDelegate.swift */; };
 		94F8C69B2386D2C100F688A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C69A2386D2C100F688A1 /* SceneDelegate.swift */; };
 		94F8C6A32386D2C100F688A1 /* testePagSeguro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C6A12386D2C100F688A1 /* testePagSeguro.xcdatamodeld */; };
@@ -60,6 +68,14 @@
 		941BF6AD238776430050096B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		941BF6AF238863FD0050096B /* HomeBotaoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBotaoCell.swift; sourceTree = "<group>"; };
 		941BF6B1238867A30050096B /* Botao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botao.swift; sourceTree = "<group>"; };
+		9448018D2388A07C00F69452 /* PagamentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagamentosViewController.swift; sourceTree = "<group>"; };
+		9448018F2388A09F00F69452 /* EmprestimoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmprestimoViewController.swift; sourceTree = "<group>"; };
+		944801912388A0B600F69452 /* TransferenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferenciaViewController.swift; sourceTree = "<group>"; };
+		944801932388A0C800F69452 /* CelularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelularViewController.swift; sourceTree = "<group>"; };
+		94E72A4D23889FBD00DFFFB1 /* PagamentosStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PagamentosStoryboard.storyboard; sourceTree = "<group>"; };
+		94E72A4F23889FEE00DFFFB1 /* EmprestimoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmprestimoStoryboard.storyboard; sourceTree = "<group>"; };
+		94E72A512388A01D00DFFFB1 /* CelularStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CelularStoryboard.storyboard; sourceTree = "<group>"; };
+		94E72A532388A03500DFFFB1 /* TransferenciaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferenciaStoryboard.storyboard; sourceTree = "<group>"; };
 		94F8C6952386D2C100F688A1 /* testePagSeguro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testePagSeguro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F8C6982386D2C100F688A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F8C69A2386D2C100F688A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +233,10 @@
 				94F8C6E0238736A100F688A1 /* TabBarController.swift */,
 				941BF6A0238743A60050096B /* HomeViewController.swift */,
 				941BF6AB2387703F0050096B /* ExtratoViewController.swift */,
+				9448018D2388A07C00F69452 /* PagamentosViewController.swift */,
+				9448018F2388A09F00F69452 /* EmprestimoViewController.swift */,
+				944801912388A0B600F69452 /* TransferenciaViewController.swift */,
+				944801932388A0C800F69452 /* CelularViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +248,10 @@
 				94F8C6D82387308000F688A1 /* TabBarControllerStoryboard.storyboard */,
 				94F8C6DB238730FA00F688A1 /* HomeStoryboard.storyboard */,
 				941BF6A623876DBD0050096B /* ExtratoStoryboard.storyboard */,
+				94E72A4D23889FBD00DFFFB1 /* PagamentosStoryboard.storyboard */,
+				94E72A4F23889FEE00DFFFB1 /* EmprestimoStoryboard.storyboard */,
+				94E72A512388A01D00DFFFB1 /* CelularStoryboard.storyboard */,
+				94E72A532388A03500DFFFB1 /* TransferenciaStoryboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -348,8 +372,12 @@
 				94F8C6A82386D2C300F688A1 /* LaunchScreen.storyboard in Resources */,
 				94F8C6D92387308000F688A1 /* TabBarControllerStoryboard.storyboard in Resources */,
 				941BF6A723876DBD0050096B /* ExtratoStoryboard.storyboard in Resources */,
+				94E72A5023889FEE00DFFFB1 /* EmprestimoStoryboard.storyboard in Resources */,
 				94F8C6A52386D2C300F688A1 /* Assets.xcassets in Resources */,
+				94E72A4E23889FBD00DFFFB1 /* PagamentosStoryboard.storyboard in Resources */,
 				94F8C6DC238730FA00F688A1 /* HomeStoryboard.storyboard in Resources */,
+				94E72A522388A01D00DFFFB1 /* CelularStoryboard.storyboard in Resources */,
+				94E72A542388A03500DFFFB1 /* TransferenciaStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +411,13 @@
 				94F8C6DF2387360900F688A1 /* Segues.swift in Sources */,
 				941BF6A523875A320050096B /* Extrato.swift in Sources */,
 				941BF6A1238743A60050096B /* HomeViewController.swift in Sources */,
+				9448018E2388A07C00F69452 /* PagamentosViewController.swift in Sources */,
 				94F8C6992386D2C100F688A1 /* AppDelegate.swift in Sources */,
 				941BF6A3238748AD0050096B /* Saldo.swift in Sources */,
 				941BF6B2238867A30050096B /* Botao.swift in Sources */,
+				944801942388A0C800F69452 /* CelularViewController.swift in Sources */,
+				944801922388A0B600F69452 /* TransferenciaViewController.swift in Sources */,
+				944801902388A09F00F69452 /* EmprestimoViewController.swift in Sources */,
 				941BF6AC2387703F0050096B /* ExtratoViewController.swift in Sources */,
 				94F8C69B2386D2C100F688A1 /* SceneDelegate.swift in Sources */,
 				941BF6B0238863FD0050096B /* HomeBotaoCell.swift in Sources */,

@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
      //****************************************************************
     //MARK: STORYBOARD OUTLETS
     //****************************************************************
+    @IBOutlet var nomeUsuarioLabel: UILabel!
     
     @IBOutlet var saldoLabel: UILabel! 
     
@@ -42,6 +43,8 @@ class HomeViewController: UIViewController {
         navigationController!.navigationBar.isHidden = true
         
         pegarUsuarioUserDefaults()
+        
+        nomeUsuarioLabel.text = usuario.name
         
         setarDelegates()
         
@@ -209,7 +212,9 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let botaoObj = Botao(botao: botao)
         
-        let viewController = botaoObj.viewController
+        let viewController = botaoObj.viewController!
+        
+        navigationController?.pushViewController(viewController, animated: true)
         
         //CHAMAR AQUI A VIEW CONTROLLER
         

@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        esconderTeclado()
         
     }
     
@@ -79,4 +79,20 @@ class LoginViewController: UIViewController {
         
     }
     
+}
+
+
+//MARK: ESCONDER TECLADO
+
+extension LoginViewController {
+    
+    func esconderTeclado() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dispensarTeclado))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dispensarTeclado() {
+        view.endEditing(true)
+    }
 }

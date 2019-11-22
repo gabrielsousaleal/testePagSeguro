@@ -10,7 +10,7 @@
         <!--Pagamentos View Controller-->
         <scene sceneID="Z9N-Ji-bQm">
             <objects>
-                <viewController storyboardIdentifier="pagamentosViewController" id="0a6-cA-2EL" customClass="PagamentosViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pagamentosStoryboard" id="0a6-cA-2EL" customClass="PagamentosViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yIH-EQ-oOG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

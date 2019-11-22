@@ -30,15 +30,15 @@ class Botao {
             
             let imagem = UIImage(named: "transferencia") ?? UIImage()
             
-//            let storyboard = UIStoryboard(name: "TransferenciaStoryboard", bundle: nil)
-//
-//            let viewController = storyboard.instantiateViewController(identifier: "transferenciaStoryboard")
+            let storyboard = UIStoryboard(name: "TransferenciaStoryboard", bundle: nil)
+
+            let viewController = storyboard.instantiateViewController(identifier: "transferenciaStoryboard")
             
             self.imagem = imagem
                    
             self.nome = "Transferência"
                    
-            //self.viewController = viewController
+            self.viewController = viewController
             
         case "payment":
             

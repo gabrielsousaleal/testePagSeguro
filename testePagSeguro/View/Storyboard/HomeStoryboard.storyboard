@@ -142,7 +142,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nHG-q5-uQU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rectangle" selectedImage="group" id="rqP-th-LZG">
+                    <tabBarItem key="tabBarItem" title="" image="group_2" selectedImage="group_3-1" id="rqP-th-LZG">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="9"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="dU7-Ua-unZ"/>
@@ -159,7 +159,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="group" width="160" height="57"/>
-        <image name="rectangle" width="160" height="55"/>
+        <image name="group_2" width="160" height="55"/>
+        <image name="group_3-1" width="160" height="57"/>
     </resources>
 </document>

@@ -10,7 +10,7 @@
         <!--Emprestimo View Controller-->
         <scene sceneID="nJI-eY-PLN">
             <objects>
-                <viewController storyboardIdentifier="EmprestimoViewController" id="pBY-kj-YGq" customClass="EmprestimoViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emprestimoStoryboard" id="pBY-kj-YGq" customClass="EmprestimoViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="21f-1L-7Jg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -67,7 +67,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7iy-dc-4DH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rectangle" selectedImage="group" id="EqT-3A-T1v">
+                    <tabBarItem key="tabBarItem" title="" image="group_2-1" selectedImage="group_3" id="EqT-3A-T1v">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -81,7 +81,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="group" width="160" height="57"/>
-        <image name="rectangle" width="160" height="55"/>
+        <image name="group_2-1" width="160" height="55"/>
+        <image name="group_3" width="160" height="57"/>
     </resources>
 </document>

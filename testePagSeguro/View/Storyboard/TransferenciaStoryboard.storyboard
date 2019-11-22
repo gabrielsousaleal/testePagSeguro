@@ -10,7 +10,7 @@
         <!--Transferencia View Controller-->
         <scene sceneID="xyU-9D-4cg">
             <objects>
-                <viewController storyboardIdentifier="transferenciaViewController" id="A8J-9H-9sx" customClass="TransferenciaViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="transferenciaStoryboard" id="A8J-9H-9sx" customClass="TransferenciaViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xpe-C5-gsA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

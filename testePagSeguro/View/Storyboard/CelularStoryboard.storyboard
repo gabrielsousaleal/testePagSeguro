@@ -10,7 +10,7 @@
         <!--Celular View Controller-->
         <scene sceneID="dbo-fv-IEP">
             <objects>
-                <viewController storyboardIdentifier="celularViewController" id="Zpf-Uj-sRi" customClass="CelularViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="celularStoryboard" id="Zpf-Uj-sRi" customClass="CelularViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wBY-Cj-tnT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

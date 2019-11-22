@@ -17,6 +17,8 @@ class ExtratoViewController: UIViewController {
     
     @IBOutlet var extratoTableView: UITableView!
     
+    @IBOutlet var nomeLabel: UILabel!
+    
     //****************************************************************
     //MARK: VARIAVEIS
     //****************************************************************
@@ -38,6 +40,8 @@ class ExtratoViewController: UIViewController {
         setarDelegates()
         
         pegarUsuarioUserDefaults()
+        
+        nomeLabel.text = usuario?.name ?? "?"
         
         pegarExtrato()
         
@@ -116,6 +120,16 @@ class ExtratoViewController: UIViewController {
         
     }
     
+    //****************************************************************
+    //MARK: STORYBOARD ACTIONS
+    //****************************************************************
+    
+    @IBAction func sair(_ sender: Any) {
+        
+        DAO().deletarUsuarioUserDefaults()
+        
+        Segues.irParaLogin(vc: self)
+    }
     
 }
 

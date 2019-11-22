@@ -123,6 +123,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBa-qO-OXg">
+                                <rect key="frame" x="272" y="43" width="30" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Ume-J9-lyQ"/>
+                                    <constraint firstAttribute="width" constant="30" id="wi6-5N-W63"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Sair">
+                                    <color key="titleColor" red="0.85490196078431369" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sair:" destination="552-Od-TvY" eventType="touchUpInside" id="Ici-tO-ujy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -133,11 +147,13 @@
                             <constraint firstItem="Aie-gy-KyD" firstAttribute="top" secondItem="FTG-ca-L0R" secondAttribute="bottom" id="CUg-21-HD1"/>
                             <constraint firstItem="aUY-5t-ggm" firstAttribute="bottom" secondItem="nHG-q5-uQU" secondAttribute="bottom" id="J2S-DN-LVU"/>
                             <constraint firstItem="nHG-q5-uQU" firstAttribute="trailing" secondItem="FTG-ca-L0R" secondAttribute="trailing" constant="80" id="QXs-q5-ftc"/>
+                            <constraint firstItem="nHG-q5-uQU" firstAttribute="trailing" secondItem="tBa-qO-OXg" secondAttribute="trailing" constant="18" id="Sjk-mo-QrC"/>
                             <constraint firstItem="Aie-gy-KyD" firstAttribute="leading" secondItem="nHG-q5-uQU" secondAttribute="leading" constant="19" id="T0a-ti-UGE"/>
                             <constraint firstItem="FTG-ca-L0R" firstAttribute="top" secondItem="cUP-9U-SpF" secondAttribute="bottom" constant="25" id="Thr-iH-DWI"/>
                             <constraint firstItem="FTG-ca-L0R" firstAttribute="leading" secondItem="nHG-q5-uQU" secondAttribute="leading" constant="19" id="bai-OU-Qdl"/>
                             <constraint firstItem="aUY-5t-ggm" firstAttribute="leading" secondItem="nHG-q5-uQU" secondAttribute="leading" id="cBd-fC-vBe"/>
                             <constraint firstItem="cUP-9U-SpF" firstAttribute="leading" secondItem="nHG-q5-uQU" secondAttribute="leading" constant="19" id="jMN-BE-KJg"/>
+                            <constraint firstItem="tBa-qO-OXg" firstAttribute="top" secondItem="gjr-bJ-hBG" secondAttribute="top" constant="43" id="mfB-AZ-gmn"/>
                             <constraint firstItem="cUP-9U-SpF" firstAttribute="top" secondItem="gjr-bJ-hBG" secondAttribute="top" constant="43" id="tSX-zq-acn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nHG-q5-uQU"/>

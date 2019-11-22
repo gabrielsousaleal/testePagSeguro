@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="ip6-aT-twi">
             <objects>
-                <viewController storyboardIdentifier="loginStoryboard" id="7ig-fy-LFB" customClass="LoginViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginStoryboard" modalPresentationStyle="fullScreen" id="7ig-fy-LFB" customClass="LoginViewController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrN-Ch-Kcd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

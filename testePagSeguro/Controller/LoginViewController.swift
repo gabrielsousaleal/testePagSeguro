@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var senhaTextField: UITextField!
     
     @IBOutlet var erroLabel: UILabel!
-    
+        
     
     //****************************************************************
     //MARK: CICLO DE VIDA
@@ -31,6 +31,21 @@ class LoginViewController: UIViewController {
         
         esconderTeclado()
         
+        pegarUsuarioUserDefaults()
+        
+    }
+    
+    func pegarUsuarioUserDefaults(){
+        
+        guard let _ = DAO().pegarUsuarioUserDefaults() else {
+            
+            return
+        }
+                
+        Segues.irParaTabBar(vc: self)
+        
+        
+                
     }
     
     

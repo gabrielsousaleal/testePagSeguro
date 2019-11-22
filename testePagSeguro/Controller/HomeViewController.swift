@@ -118,7 +118,7 @@ class HomeViewController: UIViewController {
             
         } else {
             
-                saldoString = "R$\(self.saldo!)"
+                saldoString = Helper.formatarStringParaMoeda(valor: self.saldo!)
             
         }
         
@@ -165,6 +165,17 @@ class HomeViewController: UIViewController {
         
     }
     
+    //****************************************************************
+    //MARK: STORYBOARD ACTIONS
+    //****************************************************************
+    
+    @IBAction func sair(_ sender: Any) {
+        
+        DAO().deletarUsuarioUserDefaults()
+        
+        Segues.irParaLogin(vc: self)
+        
+    }
     
 }
 

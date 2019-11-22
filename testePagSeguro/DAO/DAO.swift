@@ -172,10 +172,17 @@ class DAO {
      
         if let data = UserDefaults.standard.value(forKey:"usuario") as? Data {
             let usuario = try? PropertyListDecoder().decode(Usuario.self, from: data)
+            
             return usuario
         }
         
         return nil
+        
+    }
+    
+    func deletarUsuarioUserDefaults(){
+        
+        UserDefaults.standard.set(nil, forKey:"usuario")
         
     }
     

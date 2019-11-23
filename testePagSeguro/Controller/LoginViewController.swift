@@ -30,22 +30,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         esconderTeclado()
-        
-        pegarUsuarioUserDefaults()
-        
-    }
-    
-    func pegarUsuarioUserDefaults(){
-        
-        guard let _ = DAO().pegarUsuarioUserDefaults() else {
             
-            return
-        }
-                
-        Segues.irParaTabBar(vc: self)
-        
-        
-                
     }
     
     
@@ -94,7 +79,7 @@ class LoginViewController: UIViewController {
         
         DAO().login(usuario: usuario, senha: senha) { usuario, erro in
             
-            if erro != nil {
+            if erro == nil {
                 
                 Segues.irParaTabBar(vc: self)
                 

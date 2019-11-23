@@ -15,12 +15,7 @@ class DAO {
     //MARK: API
     //****************************************************************
     
-    func login(usuario: String, senha: String, completion: @escaping (String) -> () ){
-        
-        enum erroLogin: Error {
-            case usuarioInválido
-            case erroJson
-        }
+    func login(usuario: String, senha: String, completion: @escaping (Usuario?, String?) -> () ){
         
         let url = URL(string: "https://private-anon-b10352fce4-tqi.apiary-mock.com/auth")!
                var request = URLRequest(url: url)
@@ -43,13 +38,13 @@ class DAO {
                         
                         self.salvarUsuarioUserDefaults(usuario: json)
                         
-                        completion("sucesso")
+                        completion(json, nil)
                         
                     } catch {
                         
                         print(error)
                         
-                        completion("Erro no sistema, tente mais tarde")
+                        completion(nil, "Erro ao decodificar json.")
                         
                     }
                      
@@ -59,7 +54,7 @@ class DAO {
                     
                     print(error ?? "Unknown error")
                     
-                    completion("Usuário não encontrado")
+                    completion(nil, "Usuário não encontrado")
                    
                    
                  }
@@ -70,7 +65,7 @@ class DAO {
         
     }
     
-    func pegarSaldo(usuario: Usuario, completion: @escaping (String?) -> () ) {
+    func pegarSaldo(usuario: Usuario, completion: @escaping (String?, String?) -> () ) {
         
         let id = usuario._id
         
@@ -91,11 +86,11 @@ class DAO {
                     
                     let json = try JSONDecoder().decode(Saldo.self, from: data)
                     
-                    completion(json.balance)
+                    completion(json.balance, nil)
                     
                 } catch {
                     
-                    completion(nil)
+                    completion(nil, "Erro ao decodificar json.")
                     
                 }
                
@@ -104,7 +99,7 @@ class DAO {
           } else {
                 
             print(error ?? "Unknown error")
-            completion(nil)
+            completion(nil, "Erro ao retornar o saldo.")
                 
           }
         }
@@ -113,7 +108,7 @@ class DAO {
         
     }
     
-    func pegarExtrato(usuario: Usuario, completion: @escaping ([Extrato]) -> ()) {
+    func pegarExtrato(usuario: Usuario, completion: @escaping ([Extrato], String?) -> ()) {
         
         let id = usuario._id
         
@@ -133,13 +128,13 @@ class DAO {
                     
                     let json = try JSONDecoder().decode([Extrato].self, from: data)
                     
-                    completion(json)
+                    completion(json, nil)
                     
                 } catch {
                     
                     print(error)
                     
-                    completion([])
+                    completion([], "Erro ao decodificar json.")
                     
                 }
                 
@@ -148,7 +143,7 @@ class DAO {
             
             print(error ?? "Unknown error")
             
-            completion([])
+            completion([], "Erro ao retornar extrato.")
             
           }
         }

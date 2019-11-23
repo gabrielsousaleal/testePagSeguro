@@ -10,7 +10,7 @@
         <scene sceneID="Pdb-Qw-aJi">
             <objects>
                 <tabBarController storyboardIdentifier="tabBarController" modalPresentationStyle="fullScreen" id="rL9-tf-0pp" customClass="TabBarController" customModule="testePagSeguro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cP-CS-U4E">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="rectangle" id="5cP-CS-U4E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,10 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDV-gU-rh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="-486"/>
+            <point key="canvasLocation" x="-366" y="-502"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rectangle" width="160" height="55"/>
+    </resources>
 </document>

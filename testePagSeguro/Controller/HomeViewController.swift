@@ -90,9 +90,17 @@ class HomeViewController: UIViewController {
     
     func pegarSaldo(){
                 
-        DAO().pegarSaldo(usuario: usuario) { saldo in
+        DAO().pegarSaldo(usuario: usuario) { saldo, erro in
             
-            self.saldo = saldo
+            if erro != nil {
+                
+                self.saldo = erro!
+                
+            } else {
+                
+                self.saldo = saldo!
+                
+            }
             
             self.popularSaldo()
             

@@ -37,6 +37,9 @@ class ExtratoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isHidden = true
+        
+        
         setarDelegates()
         
         pegarUsuarioUserDefaults()
@@ -69,7 +72,7 @@ class ExtratoViewController: UIViewController {
         
         refresh.addTarget(self, action: #selector(pegarExtrato), for: .valueChanged)
         
-        refresh.tintColor = #colorLiteral(red: 1, green: 0.262745098, blue: 0.5921568627, alpha: 1)
+        refresh.tintColor = #colorLiteral(red: 0.89276582, green: 0.1277235746, blue: 0, alpha: 1)
         
         extratoTableView.refreshControl = refresh
         
@@ -112,9 +115,13 @@ class ExtratoViewController: UIViewController {
         
         guard let usuario = usuario else { return }
         
-        DAO().pegarExtrato(usuario: usuario) { extrato in
-        
-            self.recarregarTableView(extratoNovo: extrato)
+        DAO().pegarExtrato(usuario: usuario) { extrato, erro in
+            
+            if erro != nil {
+                
+                self.recarregarTableView(extratoNovo: extrato)
+                
+            }
             
         }
         

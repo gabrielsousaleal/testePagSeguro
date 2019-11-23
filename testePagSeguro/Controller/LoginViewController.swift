@@ -92,20 +92,18 @@ class LoginViewController: UIViewController {
             
         }
         
-        DAO().login(usuario: usuario, senha: senha) { mensagem in
+        DAO().login(usuario: usuario, senha: senha) { usuario, erro in
             
-            if mensagem != "sucesso" {
-                
-                self.mostrarMensagemErro(mensagem: mensagem)
-                
-            } else {
+            if erro != nil {
                 
                 Segues.irParaTabBar(vc: self)
                 
+            } else {
+                
+                self.mostrarMensagemErro(mensagem: erro!)
+                
             }
-            
-            
-            
+   
         }
         
     }

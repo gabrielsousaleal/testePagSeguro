@@ -21,7 +21,7 @@ class Botao {
         
     }
     
-    
+    //FUNCAO USADA PARA IDENTIFICAR O TIPO DE BOTAO, E ENTAO INICIALIZA-LO
     func identificarBotao(nomeBotao: String) {
                 
         switch nomeBotao {

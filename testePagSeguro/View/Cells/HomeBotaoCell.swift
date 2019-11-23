@@ -19,7 +19,7 @@ class HomeBotaoCell: UICollectionViewCell {
     
     var viewController: UIViewController?
     
-    
+    //FUNCAO QUE CONFIGURA E POPULA A CELL
     func configurarCell(botao: String) {
         
         let botaoObj = Botao(botao: botao)
@@ -30,15 +30,19 @@ class HomeBotaoCell: UICollectionViewCell {
         
         viewController = botaoObj.viewController
         
+        configurarSombra()
         
+        layer.cornerRadius = 8
+        
+    }
+    
+    func configurarSombra(){
         
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         layer.shadowRadius = 8.0
         layer.shadowOpacity = 0.3
         layer.masksToBounds = false
-        
-        layer.cornerRadius = 8
         
     }
     

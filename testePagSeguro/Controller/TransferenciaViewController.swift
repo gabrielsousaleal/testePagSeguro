@@ -9,6 +9,4 @@
 import Foundation
 import UIKit
 
-class TransferenciaViewController: UIViewController {
-    
-}
+class TransferenciaViewController: UIViewController {}

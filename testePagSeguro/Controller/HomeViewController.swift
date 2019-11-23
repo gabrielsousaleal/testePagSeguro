@@ -10,22 +10,23 @@ import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
+    
      //****************************************************************
     //MARK: STORYBOARD OUTLETS
     //****************************************************************
+    
     @IBOutlet var nomeUsuarioLabel: UILabel!
     
     @IBOutlet var saldoLabel: UILabel! 
     
     @IBOutlet var botoesCollectionView: UICollectionView!
+    
     //****************************************************************
     //MARK: VARIAVEIS
     //****************************************************************
     
     var usuario: Usuario!
-    
-    var saldo: String?
-    
+        
     var listaBotoes: [UIButton] = []
     
     var listaToggles: [String] = []
@@ -63,7 +64,6 @@ class HomeViewController: UIViewController {
     func setarDelegates(){
         
         botoesCollectionView.delegate = self
-        
         botoesCollectionView.dataSource = self
         
     }
@@ -76,6 +76,7 @@ class HomeViewController: UIViewController {
     
     func pegarUsuarioUserDefaults(){
         
+        //SE O USUARIO FOR NIL, VOLTAR PARA A TELA DE LOGIN
         guard let usuario = DAO().pegarUsuarioUserDefaults() else {
             
             Segues.irParaLogin(vc: self)
@@ -90,19 +91,19 @@ class HomeViewController: UIViewController {
     
     func pegarSaldo(){
                 
+        //SE HOUVER ERRO, MOSTRAR O ERRO,
+        //SE NÃO HOUVER, MOSTRAR O SALDO
         DAO().pegarSaldo(usuario: usuario) { saldo, erro in
             
             if erro != nil {
                 
-                self.saldo = erro!
+                self.mostrarErroSaldo(erro: erro!)
                 
             } else {
                 
-                self.saldo = saldo!
+                self.popularSaldo(saldo: saldo!)
                 
             }
-            
-            self.popularSaldo()
             
         }
         
@@ -114,23 +115,25 @@ class HomeViewController: UIViewController {
     //****************************************************************
 
     
-    func popularSaldo(){
+    func popularSaldo(saldo: String){
         
-         DispatchQueue.main.async {
+        DispatchQueue.main.async {
         
         var saldoString: String!
-        
-            if self.saldo == nil {
-            
-            saldoString = "Não foi possível obter saldo."
-            
-        } else {
-            
-                saldoString = Helper.formatarStringParaMoeda(valor: self.saldo!)
+
+        saldoString = Helper.formatarStringParaMoeda(valor: saldo)
+
+        self.saldoLabel.text = saldoString
             
         }
         
-            self.saldoLabel.text = saldoString
+    }
+    
+    func mostrarErroSaldo(erro: String) {
+        
+        DispatchQueue.main.async {
+            
+            self.saldoLabel.text = erro
             
         }
         
@@ -234,9 +237,6 @@ extension HomeViewController: UICollectionViewDataSource {
         let viewController = botaoObj.viewController!
         
         navigationController?.pushViewController(viewController, animated: true)
-        
-        //CHAMAR AQUI A VIEW CONTROLLER
-        
         
     }
     

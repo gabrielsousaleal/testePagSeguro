@@ -9,6 +9,4 @@
 import Foundation
 import UIKit
 
-class CelularViewController: UIViewController {
-    
-}
+class CelularViewController: UIViewController {}

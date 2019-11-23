@@ -9,6 +9,4 @@
 import Foundation
 import UIKit
 
-class PagamentosViewController: UIViewController {
-    
-}
+class PagamentosViewController: UIViewController {}

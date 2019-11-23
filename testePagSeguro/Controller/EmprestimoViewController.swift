@@ -9,6 +9,4 @@
 import Foundation
 import UIKit
 
-class EmprestimoViewController: UIViewController {
-    
-}
+class EmprestimoViewController: UIViewController {}

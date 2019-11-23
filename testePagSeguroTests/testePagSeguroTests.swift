@@ -48,14 +48,23 @@ class testePagSeguroTests: XCTestCase {
         let exp = expectation(description: "Pegar Extrato")
         
         var extrato: [Extrato] = []
+                        
+        dao.pegarExtrato(usuario: usuarioTeste) { resultado, erro in
+            
+            if erro != nil {
                 
-        dao.pegarExtrato(usuario: usuarioTeste) { resultado in
+                XCTFail(erro!)
+                                
+            } else {
+                
+                print(resultado)
+                
+                extrato = resultado
+                
+                exp.fulfill()
+            }
             
-            print(resultado)
             
-            extrato = resultado
-            
-            exp.fulfill()
             
         }
         
@@ -72,18 +81,18 @@ class testePagSeguroTests: XCTestCase {
     
     func testeLogin() {
         
-        //A FUNCAO FAZ A REQUISICAO DO USUARIO PARA A API, E SETA O USUARIO NO USERDDEFAULTS, RETORNANDO UM FEEDBACK DE SUCESSO OU ERRO
+        //A FUNCAO FAZ A REQUISICAO DO USUARIO PARA A API, E SETA O USUARIO NO USERDDEFAULTS, RETORNANDO O USUARIO OU UM ERRO
         
         let exp = expectation(description: "Logar")
              
-        var mensagem: String?
+        var mensagemErro: String?
         
-        dao.login(usuario: loginTeste, senha: senhaTeste) { feedback in
+        dao.login(usuario: loginTeste, senha: senhaTeste) { usuario, erro in
+            
+            mensagemErro = erro
             
             exp.fulfill()
-            
-            mensagem = feedback
-            
+                        
         }
         
         waitForExpectations(timeout: 10) { error in
@@ -91,10 +100,9 @@ class testePagSeguroTests: XCTestCase {
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")
             }
-            
-            print(mensagem ?? "")
-        
-            XCTAssert(mensagem == "sucesso")
+                    
+            //SE RETORNAR ERRO NIL, A FUNCAO OBTEVE SUCESSO
+            XCTAssert(mensagemErro == nil)
         }
         
     }
@@ -102,16 +110,23 @@ class testePagSeguroTests: XCTestCase {
     func testePegarSaldo() {
         
         var saldo: String?
-        
+                
         let exp = expectation(description: "Pegar Saldo")
         
-        dao.pegarSaldo(usuario: usuarioTeste) { resultado in
+        dao.pegarSaldo(usuario: usuarioTeste) { resultado, erro in
             
-            saldo = resultado
-            
-            exp.fulfill()
-            
-            
+            if erro != nil {
+                
+                XCTFail(erro!)
+                
+            } else {
+                
+                saldo = resultado
+                           
+                exp.fulfill()
+                
+            }
+ 
         }
         
         waitForExpectations(timeout: 10) { error in
@@ -119,9 +134,8 @@ class testePagSeguroTests: XCTestCase {
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")
             }
-            
-            print("Saldo -> ", saldo ?? "falha")
-            
+                        
+            //SE O SALDO FOR DIFERENTE DE NIL, A FUNCAO OBTEVE SUCESSO
             XCTAssert(saldo != nil)
         }
         

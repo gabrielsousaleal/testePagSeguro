@@ -39,7 +39,6 @@ class ExtratoViewController: UIViewController {
         
         navigationController?.navigationBar.isHidden = true
         
-        
         setarDelegates()
         
         pegarUsuarioUserDefaults()
@@ -57,7 +56,6 @@ class ExtratoViewController: UIViewController {
     func setarDelegates() {
         
         extratoTableView.delegate = self
-        
         extratoTableView.dataSource = self
         
         configurarTableViewRefresh()
@@ -85,6 +83,7 @@ class ExtratoViewController: UIViewController {
     
     func pegarUsuarioUserDefaults() {
         
+    //SE O USUARIO FOR NIL, VOLTAR PARA A TELA DE LOGIN
      guard let usuario = DAO().pegarUsuarioUserDefaults() else {
          
          Segues.irParaLogin(vc: self)
@@ -145,10 +144,7 @@ class ExtratoViewController: UIViewController {
    //****************************************************************
    
 
-extension ExtratoViewController: UITableViewDelegate {
-    
-    
-}
+extension ExtratoViewController: UITableViewDelegate {}
 
    //****************************************************************
    //MARK: TABLE VIEW DATA SOURCE
@@ -156,6 +152,7 @@ extension ExtratoViewController: UITableViewDelegate {
    
 
 extension ExtratoViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return extrato.count

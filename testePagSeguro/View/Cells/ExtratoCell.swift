@@ -19,17 +19,15 @@ class ExtratoCell: UITableViewCell {
     
     @IBOutlet var totalLabel: UILabel!
     
-    
+    //FUNCAO QUE CONFIGURA E POPULA A CELL
     func configurarCell(extrato: Extrato) {
         
         tipoLabel.text = extrato.type
         
         let data = formatarData(data: extrato.date)
-        
         dataLabel.text  = data
         
         let totalString = Helper.formatarStringParaMoeda(valor: extrato.value)
-        
         totalLabel.text = totalString
         
     }
@@ -37,23 +35,20 @@ class ExtratoCell: UITableViewCell {
     func formatarData(data: String) -> String {
         
         let ano = data.subString(from: 0, to: 3)
-        
         let mes = data.subString(from: 5, to: 6)
-        
         let dia = data.subString(from: 8, to: 9)
         
         let horario = data.subString(from: 11, to: 15)
         
         let novaData = dia + "/" + mes + "/" + ano + " às " + horario
-        
-        
-        
+
         return novaData
         
     }
     
 }
 
+//FUNCAO QUE FAZ SUBSTRING
 extension String {
     func subString(from: Int, to: Int) -> String {
        let startIndex = self.index(self.startIndex, offsetBy: from)

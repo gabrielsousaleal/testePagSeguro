@@ -18,6 +18,6 @@ struct Usuario: Codable {
     let phoneNumber: String
     let document: String
     let _id: Int
-    let toggles: [String]
+    var toggles: [String]
     
 }

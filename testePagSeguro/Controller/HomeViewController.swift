@@ -26,11 +26,6 @@ class HomeViewController: UIViewController {
     //****************************************************************
     
     var usuario: Usuario!
-        
-    var listaBotoes: [UIButton] = []
-    
-    var listaToggles: [String] = []
-    
     
     
     
@@ -57,7 +52,7 @@ class HomeViewController: UIViewController {
         
         pegarSaldo()
         
-        pegarToggles()
+        recarregarCollectionViewBotoes()
         
     }
     
@@ -146,7 +141,7 @@ class HomeViewController: UIViewController {
     func recarregarCollectionView() {
         
         DispatchQueue.main.async {
-            
+                        
             self.botoesCollectionView.reloadData()
             
         }
@@ -168,14 +163,8 @@ class HomeViewController: UIViewController {
         
     }
     
-    //****************************************************************
-    //MARK: LÓGICA
-    //****************************************************************
-    
-    func pegarToggles(){
-        
-        listaToggles = usuario.toggles
-        
+    func recarregarCollectionViewBotoes(){
+                
         recarregarCollectionView()
         
     }

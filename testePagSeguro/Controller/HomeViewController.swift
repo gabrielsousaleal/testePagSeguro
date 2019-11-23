@@ -43,18 +43,22 @@ class HomeViewController: UIViewController {
         
         navigationController!.navigationBar.isHidden = true
         
+        setarDelegates()
+        
+        setarLayoutCells()
+                
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         pegarUsuarioUserDefaults()
         
         nomeUsuarioLabel.text = usuario.name
         
-        setarDelegates()
-        
-        setarLayoutCells()
-            
         pegarSaldo()
         
         pegarToggles()
-                
+        
     }
     
     //****************************************************************

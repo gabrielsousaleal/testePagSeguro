@@ -41,6 +41,10 @@ class ExtratoViewController: UIViewController {
         
         setarDelegates()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         pegarUsuarioUserDefaults()
         
         nomeLabel.text = usuario?.name ?? "?"

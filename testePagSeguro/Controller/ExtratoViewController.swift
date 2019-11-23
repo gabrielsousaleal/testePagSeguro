@@ -117,7 +117,7 @@ class ExtratoViewController: UIViewController {
         
         DAO().pegarExtrato(usuario: usuario) { extrato, erro in
             
-            if erro != nil {
+            if erro == nil {
                 
                 self.recarregarTableView(extratoNovo: extrato)
                 
